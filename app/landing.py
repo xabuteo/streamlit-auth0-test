@@ -32,7 +32,7 @@ If you have any questions or concerns, feel free to [reach out](mailto:contant@a
 """)
 st.link_button(
     "Find Any Bug?",
-    url="https://github.com/andfanilo/streamlit-auth0-test",
+    url="https://github.com/andfanilo/streamlit-auth0-test/issues",
     icon=":material/bug_report:",
     type="tertiary",
 )
