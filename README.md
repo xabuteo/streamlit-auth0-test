@@ -42,6 +42,7 @@ Use `st.login("google")` part in `app/landing.py` to enable Google Authenticatio
     - You can find the documentation to create the Google `Client ID` and `Client Secret` on the [Auth0 Marketplace](https://marketplace.auth0.com/integrations/google-social-connection). Most Social Connections are documented in the same way.
   - In `Applications > Applications`, a Default Regular Web Application.
     - Verify it is linked to the database and google-oauth connections in the `Connections` tab of the application.
+    - If deploying, you need to add `https://HOST/oauth2callback` as `Allowed Callback URLs` and `https://HOST` as `Allowed Logout URLs
 
 Copy the `Client ID` and `Client Secret` from the default application Settings, back into your Secrets:
 
