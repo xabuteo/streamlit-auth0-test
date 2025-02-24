@@ -1,5 +1,7 @@
 # Streamlit Auth0 Test
 
+![](./img/demo.gif)
+
 ## Prerequisites
 
 - A Google Project. Initialize one from the [GCP Console](https://console.cloud.google.com/)
