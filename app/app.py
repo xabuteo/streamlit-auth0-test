@@ -24,7 +24,7 @@ st.markdown(
     "It really helps me test out [Auth0](https://auth0.com/) so I feel I can properly recommend it in my next video"
 )
 
-st.link_button("Get the Source Code", url="https://github.com/", icon=":material/code:")
+st.link_button("Get the Source Code", url="https://github.com/andfanilo/streamlit-auth0-test/", icon=":material/code:")
 
 st.markdown(
     "Ready to get your Data projects noticed? 😁 While I finish editing the video, here are a few resources"
