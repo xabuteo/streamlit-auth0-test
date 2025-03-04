@@ -66,3 +66,32 @@ As documented on the Google Social login [doc](https://marketplace.auth0.com/int
 - Add `https://<DOMAIN>.<REGION>.auth0.com/login/callback` to `Authorized redirect URIs`
 
 Use `st.login("auth0")` in `app/landing.py` to enable Google and Email/Password Authentication with Auth0 from your Streamlit app.
+
+## Using the Admin panel for Auth0 Management API
+
+Link you Auth0 Web Application's API to the Default `Auth0 Management API` System API.
+
+Give it the permissions for `read:users`, `read:user_idp_tokens` and `read:users_app_metadata` under the `APIs` tab for the Application.
+
+Add an `admin_email` at the root top of your `.streamlit/secrets.toml` file. This will be the only authenticated email to get access to the admin page.
+
+Add the Auth0 Domain to your `[auth.auth0]` config for Auth0 Management API:
+
+```toml
+admin_email = "XXX@test.com"
+
+[auth]
+redirect_uri="http://localhost:8501/oauth2callback"
+cookie_secret=<generate a long random string>
+
+[auth.auth0]
+domain = "mydomain.auth0.com"
+client_id = "XXX"
+client_secret = "XXX"
+server_metadata_url="https://<DOMAIN>.<REGION>.auth0.com/.well-known/openid-configuration"
+client_kwargs = { "prompt" = "login" }
+```
+
+## Resources
+
+- Use the Auth0 Python SDK for Querying and Storing Users' Data: https://auth0.com/blog/use-the-auth0-python-sdk-for-querying-and-storing-users-data/
