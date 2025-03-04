@@ -31,8 +31,8 @@ client_secret = st.secrets["auth"]["auth0"]["client_secret"]
 auth0 = get_client(domain, client_id, client_secret)
 users = get_users(auth0)
 
-with st.expander("Preview list of users"):
-    st.json(users)
+# with st.expander("Preview list of users"):
+#     st.json(users)
 
 st.subheader(f"You have **:primary[{users['total']}]** registered users")
 
