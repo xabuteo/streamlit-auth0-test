@@ -56,7 +56,7 @@ with st.container(border=True):
     )
     st.link_button(
         "**Access my emails**",
-        url="https://andfanilo-newsletter.streamlit.app",
+        url="https://newsletter.andfanilo.com",
         icon=":material/mail:",
         type="primary",
     )
