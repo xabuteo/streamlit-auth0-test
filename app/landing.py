@@ -6,6 +6,7 @@ import pkg_resources
 st.title("📔 Streamlit + Auth0 Production test")
 st.write("Streamlit version:", st.__version__)
 st.write(st.user.to_dict())
+st.json(st.user)
 st.text(pprint.pformat(dict(st.session_state)))
 print(dir(streamlit_auth0))
 print(pkg_resources.get_distribution("streamlit-auth0").version)
