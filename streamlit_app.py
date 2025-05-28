@@ -6,8 +6,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-st.user.to_dict()
-
 # Define app pages
 landing_page = st.Page("./app/landing.py", title="Landing", icon=":material/home:")
 app_page = st.Page("./app/app.py", title="App", icon=":material/play_arrow:")
