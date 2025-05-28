@@ -2,17 +2,17 @@ import streamlit as st
 
 st.title("✨ Thanks for checking in!")
 
-if not st.experimental_user["email_verified"]:
+if not st.user["email_verified"]:
     st.warning("Please verify your email and login back to unlock all features")
 
 with st.sidebar:
-    st.header(f"Logged in with {st.experimental_user.email}")
+    st.header(f"Logged in with {st.user.email}")
     if st.button("🔓 Logout"):
         st.logout()
     with st.expander(
-        "Checkout your `st.experimental_user` local ID Token from the Identity Provider, securely stored in a cookie that expires in 30 days"
+        "Checkout your `st.user` local ID Token from the Identity Provider, securely stored in a cookie that expires in 30 days"
     ):
-        st.json(st.experimental_user)
+        st.json(st.user)
     st.link_button(
         "Find Any Bug?",
         url="https://github.com/andfanilo/streamlit-auth0-test/issues",
