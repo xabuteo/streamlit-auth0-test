@@ -3,6 +3,7 @@ import streamlit as st
 st.title("📔 Streamlit + Auth0 Production test")
 
 st.write(st.user.to_dict())
+st.write("Session state:", dict(st.session_state))
 
 st.markdown(
     "Hello DataFan, help me benchmark [Auth0](https://auth0.com/) for a future video by connecting with Google or creating an Email/Password account with verification 😁"
