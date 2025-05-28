@@ -1,10 +1,19 @@
 import streamlit as st
 import pprint
+from streamlit_auth0 import login_button, logout_button, get_user
 
 st.title("📔 Streamlit + Auth0 Production test")
 
 st.write(st.user.to_dict())
 st.text(pprint.pformat(dict(st.session_state)))
+user = get_user()
+
+if user:
+    st.write(f"Hello {user['name']}!")
+    logout_button()
+else:
+    login_button()
+
 
 st.markdown(
     "Hello DataFan, help me benchmark [Auth0](https://auth0.com/) for a future video by connecting with Google or creating an Email/Password account with verification 😁"
