@@ -4,7 +4,7 @@ import streamlit_auth0
 import pkg_resources
 
 st.title("📔 Streamlit + Auth0 Production test")
-
+st.write("Streamlit version:", st.__version__)
 #st.write(st.user.to_dict())
 #st.text(pprint.pformat(dict(st.session_state)))
 print(dir(streamlit_auth0))
