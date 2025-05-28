@@ -1,7 +1,6 @@
 import streamlit as st
 import pprint
 import streamlit_auth0
-print(dir(streamlit_auth0))
 
 #from streamlit_auth0 import login_button, logout_button, get_user
 
@@ -9,6 +8,8 @@ st.title("📔 Streamlit + Auth0 Production test")
 
 st.write(st.user.to_dict())
 st.text(pprint.pformat(dict(st.session_state)))
+print(dir(streamlit_auth0))
+
 #user = get_user()
 
 #if user:
